@@ -52,7 +52,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Caching",
+      title: "渐进式网络应用",
     }),
   ],
 };
