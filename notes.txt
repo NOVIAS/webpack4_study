@@ -1,0 +1,4 @@
+ webpack 4 与 html-webpack-plugin 有兼容问题，需要降级
+ webpack cli 4 与 webpack-dev-server 有兼容，需要使用 webpack serve --open
+
+ 在使用 async 动态导入时，要安装 core-js 与 @babel/plugin-syntax-dynamic-import
