@@ -27,6 +27,8 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "4.5.2",
     "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.2",
     "url-loader": "^4.1.1",
     "webpack": "4.44.2",
     "webpack-cli": "^4.5.0",

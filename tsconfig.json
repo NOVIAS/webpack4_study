@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true
+  }
+}
+
+// 安装第三方库 不要忘记安装类型声明文件
+// 在 ts 中导入非代码资源，需要创建d.ts文件来推断导入资源的类型
+// 使用 typings-for-css-modules-loader 为 css 生成 类型文件

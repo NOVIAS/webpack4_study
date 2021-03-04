@@ -8,6 +8,8 @@ devDependencies:
   file-loader: 6.2.0_webpack@4.44.2
   html-webpack-plugin: 4.5.2_webpack@4.44.2
   style-loader: 2.0.0_webpack@4.44.2
+  ts-loader: 8.0.17_typescript@4.2.2+webpack@4.44.2
+  typescript: 4.2.2
   url-loader: 4.1.1_file-loader@6.2.0+webpack@4.44.2
   webpack: 4.44.2_webpack-cli@4.5.0
   webpack-cli: 4.5.0_b24347012da62a72aee59d51298aa452
@@ -1109,6 +1111,9 @@ packages:
       '@babel/core': ^7.0.0
       '@types/babel__core': ^7.1.9
       rollup: ^1.20.0||^2.0.0
+    peerDependenciesMeta:
+      '@types/babel__core':
+        optional: true
     resolution:
       integrity: sha1-nLHFFG3daklorZbyCcUMYvkvmHk=
       tarball: '@rollup/plugin-babel/download/@rollup/plugin-babel-5.3.0.tgz'
@@ -1526,6 +1531,15 @@ packages:
     resolution:
       integrity: sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=
       tarball: ansi-styles/download/ansi-styles-3.2.1.tgz
+  /ansi-styles/4.3.0:
+    dependencies:
+      color-convert: 2.0.1
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha1-7dgDYornHATIWuegkG7a00tkiTc=
+      tarball: ansi-styles/download/ansi-styles-4.3.0.tgz
   /anymatch/2.0.0:
     dependencies:
       micromatch: 3.1.10
@@ -1841,7 +1855,6 @@ packages:
     dev: true
     engines:
       node: '>=8'
-    optional: true
     resolution:
       integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
       tarball: braces/download/braces-3.0.2.tgz
@@ -2059,6 +2072,16 @@ packages:
     resolution:
       integrity: sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
       tarball: chalk/download/chalk-2.4.2.tgz
+  /chalk/4.1.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha1-ThSHCmGNni7dl92DRf2dncMVZGo=
+      tarball: chalk/download/chalk-4.1.0.tgz
   /chokidar/2.1.8:
     dependencies:
       anymatch: 2.0.0
@@ -2190,11 +2213,25 @@ packages:
     resolution:
       integrity: sha1-u3GFBpDh8TZWfeYp0tVHHe2kweg=
       tarball: color-convert/download/color-convert-1.9.3.tgz
+  /color-convert/2.0.1:
+    dependencies:
+      color-name: 1.1.4
+    dev: true
+    engines:
+      node: '>=7.0.0'
+    resolution:
+      integrity: sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=
+      tarball: color-convert/download/color-convert-2.0.1.tgz
   /color-name/1.1.3:
     dev: true
     resolution:
       integrity: sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
       tarball: color-name/download/color-name-1.1.3.tgz
+  /color-name/1.1.4:
+    dev: true
+    resolution:
+      integrity: sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
+      tarball: color-name/download/color-name-1.1.4.tgz
   /colorette/1.2.2:
     dev: true
     resolution:
@@ -3187,7 +3224,6 @@ packages:
     dev: true
     engines:
       node: '>=8'
-    optional: true
     resolution:
       integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=
       tarball: fill-range/download/fill-range-7.0.1.tgz
@@ -4040,7 +4076,6 @@ packages:
     dev: true
     engines:
       node: '>=0.12.0'
-    optional: true
     resolution:
       integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
       tarball: is-number/download/is-number-7.0.0.tgz
@@ -4500,6 +4535,16 @@ packages:
     resolution:
       integrity: sha1-cIWbyVyYQJUvNZoGij/En57PrCM=
       tarball: micromatch/download/micromatch-3.1.10.tgz
+  /micromatch/4.0.2:
+    dependencies:
+      braces: 3.0.2
+      picomatch: 2.2.2
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha1-T8sJmb+fvC/L3SEvbWKbmlbDklk=
+      tarball: micromatch/download/micromatch-4.0.2.tgz
   /miller-rabin/4.0.1:
     dependencies:
       bn.js: 4.11.9
@@ -6439,7 +6484,6 @@ packages:
     dev: true
     engines:
       node: '>=8.0'
-    optional: true
     resolution:
       integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=
       tarball: to-regex-range/download/to-regex-range-5.0.1.tgz
@@ -6469,6 +6513,24 @@ packages:
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
       tarball: tr46/download/tr46-1.0.1.tgz
+  /ts-loader/8.0.17_typescript@4.2.2+webpack@4.44.2:
+    dependencies:
+      chalk: 4.1.0
+      enhanced-resolve: 4.5.0
+      loader-utils: 2.0.0
+      micromatch: 4.0.2
+      semver: 7.3.4
+      typescript: 4.2.2
+      webpack: 4.44.2_webpack-cli@4.5.0
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    peerDependencies:
+      typescript: '*'
+      webpack: '*'
+    resolution:
+      integrity: sha1-mPLM/5EwB09Aef2JuUa0xjex8vw=
+      tarball: ts-loader/download/ts-loader-8.0.17.tgz
   /tslib/1.14.1:
     dev: true
     resolution:
@@ -6506,6 +6568,14 @@ packages:
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
       tarball: typedarray/download/typedarray-0.0.6.tgz
+  /typescript/4.2.2:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-FFDwIGGPhy2w6hcxfRbY2o3bjEw=
+      tarball: typescript/download/typescript-4.2.2.tgz?cache=0&sync_timestamp=1614843515904&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.2.2.tgz
   /unicode-canonical-property-names-ecmascript/1.0.4:
     dev: true
     engines:
@@ -7291,6 +7361,8 @@ specifiers:
   file-loader: ^6.2.0
   html-webpack-plugin: 4.5.2
   style-loader: ^2.0.0
+  ts-loader: ^8.0.17
+  typescript: ^4.2.2
   url-loader: ^4.1.1
   webpack: 4.44.2
   webpack-cli: ^4.5.0
