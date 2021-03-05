@@ -40,10 +40,6 @@ module.exports = {
     // side-effects中需要排除在js中引入的css文件，否则会被认为没有使用而去掉
     // 在 prod 环境中默认开启 树摇
     usedExports: true,
-    // 避免重复引入的代码分割
-    // splitChunks: {
-    //   chunks: "all",
-    // },
     // 把 引入模板 单独提取为 chunk，并且为所有chunk创建一个runtime bundle
     runtimeChunk: "single",
     // 某些不需要改动的代码可以直接缓存
@@ -52,6 +48,7 @@ module.exports = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendor",
+          // 避免重复引入
           chunks: "all",
         },
       },
